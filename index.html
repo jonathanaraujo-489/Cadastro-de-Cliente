@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="form-container">
+        <h1>Cadastro de Cliente</h1>
+        <p>Preencha os dados abaixo para iniciar.</p>
+        
+        <form id="clienteForm">
+            <fieldset>
+                <legend>Informações Principais</legend>
+
+                <label for="nome">Nome Completo*</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="fantasia">Nome Fantasia (se aplicável)</label>
+                <input type="text" id="fantasia" name="fantasia">
+                
+                <label for="cpfCnpj">CPF/CNPJ*</label>
+                <input type="text" id="cpfCnpj" name="cpfCnpj" required>
+
+                <label for="rg">RG</label>
+                <input type="text" id="rg" name="rg">
+
+                <label for="inscricaoEstadual">Inscrição Estadual</label>
+                <input type="text" id="inscricaoEstadual" name="inscricaoEstadual">
+
+                <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                <input type="text" id="inscricaoMunicipal" name="inscricaoMunicipal">
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" id="dataNascimento" name="dataNascimento">
+
+                <label for="sexo">Sexo</label>
+                <select id="sexo" name="sexo">
+                    <option value="">Prefiro não informar</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+
+                <label for="estadoCivil">Estado Civil</label>
+                <select id="estadoCivil" name="estadoCivil">
+                    <option value="">Selecione</option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                    <option value="União Estável">União Estável</option>
+                </select>
+
+                <label for="dataCasamento">Data de Casamento (se aplicável)</label>
+                <input type="date" id="dataCasamento" name="dataCasamento">
+
+                <label for="profissao">Profissão</label>
+                <input type="text" id="profissao" name="profissao">
+
+                <label for="naturalidade">Naturalidade (Cidade/UF)</label>
+                <input type="text" id="naturalidade" name="naturalidade">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone Fixo</label>
+                <input type="tel" id="telefone" name="telefone">
+                
+                <label for="celular">Celular/WhatsApp*</label>
+                <input type="tel" id="celular" name="celular" required>
+
+                <label for="telefoneAdicional">Telefone Adicional</label>
+                <input type="tel" id="telefoneAdicional" name="telefoneAdicional">
+                
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" placeholder="@usuario">
+
+                <label for="site">Site</label>
+                <input type="url" id="site" name="site" placeholder="https://seusite.com.br">
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="endereco_cep">
+
+                <label for="endereco">Endereço (Rua, Av.)</label>
+                <input type="text" id="endereco" name="endereco_endereco">
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="endereco_numero">
+
+                <label for="complemento">Complemento (Apto, Bloco)</label>
+                <input type="text" id="complemento" name="endereco_complemento">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="endereco_bairro">
+
+                <label for="municipio">Município</label>
+                <input type="text" id="municipio" name="endereco_municipio">
+                
+                <label for="uf">UF</label>
+                <input type="text" id="uf" name="endereco_uf" maxlength="2">
+
+                <label for="pais">País</label>
+                <input type="text" id="pais" name="endereco_pais" value="Brasil">
+            </fieldset>
+
+            <fieldset>
+                <legend>Perfil de Compra</legend>
+
+                <label for="preferenciaJoias">Preferência Principal de Joias</label>
+                <select id="preferenciaJoias" name="preferenciaJoias" required>
+                    <option value="" disabled selected>Selecione o tipo principal</option>
+                    <option value="Anéis">Anéis</option>
+                    <option value="Brincos">Brincos</option>
+                    <option value="Colares">Colares</option>
+                    <option value="Pulseiras">Pulseiras</option>
+                    <option value="Alianças">Alianças</option>
+                    <option value="Pingentes">Pingentes</option>
+                    <option value="Correntes">Correntes</option>
+                    <option value="Braceletes">Braceletes</option>
+                    <option value="Escapulários">Escapulários</option>
+                    <option value="Peças pesadas">Peças pesadas</option>
+                    <option value="Gemas (Diamantes, Safiras, Rubis, Esmeraldas)">Gemas (Diamantes, Safiras, Rubis, Esmeraldas)</option>
+                    <option value="Joias Personalizadas">Joias Personalizadas</option>
+                </select>
+
+                <label for="orcamentoMensal">Orçamento Médio</label>
+                <select id="orcamentoMensal" name="orcamentoMensal">
+                    <option value="">Selecione uma faixa</option>
+                    <option value="ate-500">Até R$ 500</option>
+                    <option value="501-1500">R$ 501 - R$ 1.500</option>
+                    <option value="1501-3000">R$ 1.501 - R$ 3.000</option>
+                    <option value="acima-3000">Acima de R$ 3.000</option>
+                </select>
+
+                <label for="ocasiaoCompra">Principal Ocasião de Compra</label>
+                <select id="ocasiaoCompra" name="ocasiaoCompra">
+                    <option value="">Selecione uma ocasião</option>
+                    <option value="Presente para mim">Presente para mim</option>
+                    <option value="Presente para outros">Presente para outros</option>
+                    <option value="Aniversário">Aniversário</option>
+                    <option value="Aniversário de Casamento/Namoro">Aniversário de Casamento/Namoro</option>
+                    <option value="Dia das Mães">Dia das Mães</option>
+                    <option value="Dia dos Namorados">Dia dos Namorados</option>
+                    <option value="Natal">Natal</option>
+                    <option value="Outras datas comemorativas">Outras datas comemorativas</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" name="observacoes" rows="5"></textarea>
+            </fieldset>
+
+            <input type="hidden" name="tipos" value="Cliente">
+            <input type="hidden" name="tipos" value="Cliente">
+            <input type="hidden" name="codigo" value="">
+
+            <button type="submit">Cadastrar Cliente</button>
+        
+        </form> <div id="success-screen" class="feedback-screen">
+            <div class="icon">✅</div>
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Os dados do cliente foram enviados e registrados.</p>
+            <a href="index.html" class="feedback-button">Cadastrar Novo Cliente</a>
+        </div>
+
+        <div id="error-screen" class="feedback-screen">
+            <div class="icon">❌</div>
+            <h2>Ocorreu um erro!</h2>
+            <p>Não foi possível registrar o cliente. Por favor, verifique os dados ou sua conexão e tente novamente.</p>
+            <a href="index.html" class="feedback-button">Tentar Novamente</a>
+        </div>
+    </div> <script src="script.js"></script>
+</body>
+</html>
+

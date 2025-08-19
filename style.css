@@ -1,0 +1,235 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Estilos gerais */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#form-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 700px;
+}
+
+h1, p {
+    text-align: center;
+    border-bottom: none;
+    margin: 0;
+}
+h1 { font-weight: 700; color: #1a1a1a; }
+p { margin-bottom: 30px; color: #666; }
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+legend {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #6a38c2;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #6a38c2;
+    box-shadow: 0 0 0 3px rgba(106, 56, 194, 0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a38c2, #8e44ad);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(106, 56, 194, 0.2);
+}
+
+#form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* --- ADICIONAR AO FINAL DO ARQUIVO CSS --- */
+
+/* 1. Força os campos de data e URL a terem o mesmo estilo base dos outros campos.
+     Esta é a parte mais importante da correção.
+*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"], /* Adicionado aqui */
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none; /* Remove a aparência padrão no iOS/Safari */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 2. Ajustes finos para o ícone do calendário dentro do campo de data.
+     Isso melhora a aparência do ícone para combinar com o design.
+*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* --- ADICIONAR AO FINAL DO ARQUIVO CSS --- */
+
+/* =============================================== */
+/* ESTILOS PARA DISPOSITIVOS MÓVEIS (RESPONSIVO)   */
+/* =============================================== */
+
+/* Aplica estas regras quando a tela for de 600px de largura ou menor */
+@media (max-width: 600px) {
+
+    /* Diminui o padding geral do formulário para ganhar mais espaço */
+    #form-container {
+        padding: 25px;
+    }
+
+    /* Reduz um pouco o tamanho do título principal */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    /* A MUDANÇA MAIS IMPORTANTE:
+       Faz a grade de botões de rádio ter apenas UMA coluna.
+    */
+    .radio-group {
+        grid-template-columns: 1fr; /* De 2 colunas para 1 coluna */
+    }
+
+    /* Caso você também tenha um grupo de checkboxes, aplique a mesma regra. */
+    .checkbox-group {
+        grid-template-columns: 1fr; /* De 2 colunas para 1 coluna */
+    }
+}
+
+/* ========================================================== */
+/* ESTILOS PARA AS TELAS DE FEEDBACK (VERSÃO FINAL)           */
+/* ========================================================== */
+
+/* Estilo base para ambas as telas */
+.feedback-screen {
+    display: none; /* Garante que ambas comecem escondidas */
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* Estilo para os ícones ✅ e ❌ */
+.feedback-screen .icon {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.feedback-screen h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feedback-screen p {
+    color: #666;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* ESTILO DEFINITIVO PARA OS BOTÕES DE FEEDBACK */
+.feedback-screen .feedback-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a38c2, #8e44ad);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.feedback-screen .feedback-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(106, 56, 194, 0.2);
+}
+
+/* Cores específicas para cada tela */
+#success-screen h2 {
+    color: #28a745;
+}
+
+#error-screen h2 {
+    color: #dc3545;
+}
